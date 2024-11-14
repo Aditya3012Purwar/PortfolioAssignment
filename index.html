@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Purwar - Portfolio</title>
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('fonts/Telegraf/PPTelegraf-Regular.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'CustomFont', sans-serif;
+        }
+
+
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a855f7;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 0;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .intro-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 100px;
+            font-family: 'CustomFont';
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .name span {
+            color: #a855f7;
+        }
+
+        .titledescription {
+            font-family: 'CustomFont';
+            font-size: 20px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .decorative-element {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            top: -10%;
+            left: -10%;
+            z-index: -1;
+            background: linear-gradient(45deg, #a855f7, #ff8c00);
+            opacity: 0.6;
+            border-radius: 40% 60% 70% 30%;
+            animation: float 6s ease-in-out infinite;
+        }
+        .quotation img{
+            height: 30px;
+            width: 50px;
+        }
+
+        .quote{
+            margin-bottom: 20px;
+        }
+
+        .dive-in {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #a855f7, #ff8c00);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .dive-in:hover {
+            transform: translateY(-3px);
+        }
+
+        .social {
+            margin-top: 40px;
+        }
+
+        .social-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin-right: 20px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #a855f7;
+        }
+
+        .myimage img{
+            height: 500px;
+            width: 500px;
+            index: -1;
+            left: 800px;
+        }
+            nav {
+                justify-content: center;
+            }
+        }
+
+        .about-me-content {
+            text-align: center;
+            padding: 50px 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-me-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            position: absolute;
+            align-items: center;
+            color: #fff;
+            left: 150px;
+        }
+
+        .about-me-content p {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+        .experience-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:60%;
+            margin: auto 200px;
+        }
+        .experience-title {
+            font-size: 3rem;
+            color: #fff;
+            transform: rotate(270deg);
+            width: 100px;
+            position: relative;
+            left:250px;
+            top:180px;
+            margin-right: 10px;
+            font-family: 'CustomFont';
+        }
+        .experience-title span {
+            color: #a855f7;
+        }
+        .experience-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 100px;
+        }
+        .card {
+            width: 450px;
+            height: 480px;
+            background-color: #1A1A1A;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            border: 2px solid transparent; /* Set a transparent border initially */
+            padding: 10px; /* Adjust padding as needed */
+            background-clip: padding-box, border-box; /* Apply gradient to both padding and border */
+            border-image: linear-gradient(45deg, #a855f7, #ff8c00) 2;
+        }
+        .card h3 {
+            font-size: 1.7rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .card p {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .card ul li {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #ddd;
+        }
+        .resume-button {
+          align-self: center;
+          margin: 0 auto 50px; /* Center horizontally, 20px margin top */
+          display: inline-block;
+          padding: 10px 30px;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #fff;
+          border: 2px solid transparent; /* Set a transparent border initially */
+          padding: 10px; /* Adjust padding as needed */
+          background-clip: padding-box, border-box; /* Apply gradient to both padding and border */
+          border-image: linear-gradient(45deg, #a855f7, #ff8c00) 2;
+          border-radius: 25px;
+          text-decoration: none;
+          text-align: center;
+          display: flex;
+          width: 200px;
+          justify-content: center;
+          margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#certification">Certification</a>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <p class="intro-text">Hi, I am</p>
+                <h1 class="name">
+                    <span>Aditya</span><br>
+                    Purwar
+                </h1>
+                <p class="titledescription">Data Scientist | Data Analyst | Generative AI Enthusiast</p>
+                <div class="quotation">
+                    <img src="assets\Quotation Mark.png" alt="">
+                </div>
+                <p class="quote">Success is a Journey, not a Destination</p>
+
+
+                <a href="about" class="dive-in">DIVE IN</a>
+
+                <div class="social">
+                    <p class="social-text">GET SOCIAL</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/aditya-purwar-710890241/" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="myimage">
+                <img src="assets\myimage.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    <div class="about-me-content" id="about">
+        <h2>About Me</h2>
+        <p>I'm Aditya Purwar, a Computer Science student at VIT Vellore with a specialization in Business Systems. Originating from Indirapuram, Ghaziabad, I'm passionate about leveraging Web Development, Generative AI, IoT, AI, and Machine Learning to craft solutions that address real-world challenges and shape the future of technology-driven businesses.</p>
+    </div>
+
+    <div class="experience-section" id="experience">
+
+        <div class="experience-cards">
+            <div class="experience-title"> <span>Exp</span>erience</div>
+            <div class="card">
+                <h3>Research Intern</h3>
+                <p>@ Samsung Research Institute, Bangalore</p>
+                <p>October 2024 - Present</p>
+                <ul>
+                    <li>Collected and processed data for model training and dataset preparation.</li>
+                    <li>Developing multilingual generative AI models for IoT devices, integrating with SmartThings.</li>
+                    <li>Optimizing performance by integrating RAG and fine-tuning large language models.</li>
+                    <li>Designing use cases for AI assistant solutions, enhancing Samsung Bixby with contextual understanding.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>RPA & ML Intern</h3>
+                <p>@ Gas Authority of India Limited (GAIL), Noida</p>
+                <p>September 2024 - October 2023</p>
+                <ul>
+                    <li>Developed RPA-powered email bot for classification and summarization.</li>
+                    <li>Built interactive Generative AI chatbot using LangChain and LLMs.</li>
+                    <li>Created sales forecasting and sentiment analysis tools with Python.</li>
+                </ul>
+            </div>
+        </div>
+        <a href="https://drive.google.com/file/d/1ApiD82WiYmOx_JiCEwOJVAUlZFLOkWsU/view?usp=sharing" class="resume-button">Resume</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>
